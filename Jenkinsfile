@@ -37,4 +37,5 @@ edgeXBuildGoParallel(
     swaggerApiFolders: ['openapi/v3'],
     buildSnap: false,
     pushImage: false,
+    mavenSettings: '/home/ali/.m2/settings.xml'
 )
