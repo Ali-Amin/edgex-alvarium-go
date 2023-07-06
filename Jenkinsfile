@@ -36,5 +36,6 @@ edgeXBuildGoParallel(
     publishSwaggerDocs: false,
     swaggerApiFolders: ['openapi/v3'],
     buildSnap: false,
-    pushImage: false
+    pushImage: false,
+    semver: false
 )
