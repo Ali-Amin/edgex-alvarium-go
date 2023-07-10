@@ -15,6 +15,19 @@
 // limitations under the License.
 //
 
+library(identifier: 'lf-pipelines',
+    retriever: legacySCM([
+        $class: 'GitSCM',
+        userRemoteConfigs: [[url: 'https://gerrit.linuxfoundation.org/infra/releng/pipelines']],
+        branches: [[name: '*']],
+        doGenerateSubmoduleConfigurations: false,
+        extensions: [[
+            $class: 'SubmoduleOption',
+            recursiveSubmodules: true,
+        ]]]
+    )
+) _
+
 library(identifier: 'edgex-global-pipelines@main',
     retriever: legacySCM([
         $class: 'GitSCM',
@@ -27,6 +40,7 @@ library(identifier: 'edgex-global-pipelines@main',
         ]]]
     )
 ) _
+
 
 edgeXBuildGoParallel(
     project: 'edgex-go',
