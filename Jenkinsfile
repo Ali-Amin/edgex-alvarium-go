@@ -15,7 +15,7 @@
 // limitations under the License.
 //
 
-library(identifier: 'lf-pipelines',
+library(identifier: 'lf-pipelines@main',
     retriever: legacySCM([
         $class: 'GitSCM',
         userRemoteConfigs: [[url: 'https://gerrit.linuxfoundation.org/infra/releng/pipelines']],
